@@ -42,12 +42,12 @@ public class JpaMainProxy {
             entityManager.flush();
             entityManager.clear();
 
-//            Member findMember = entityManager.find(Member.class, member.getId());
-//            System.out.println("findMember.getUsername() = " + findMember.getUsername());
+//            Member findMember = entityManager.find(Member.class, member.getId()); // DB 쿼리 나감
+//            System.out.println("findMember.getUsername() = " + findMember.getUsername()); // DB 쿼리 나감
 
-//            Member findRefMember = entityManager.getReference(Member.class, m1.getId()); // DB 쿼리 안나감
+//            Member findRefMember = entityManager.getReference(Member.class, m1.getId()); // DB 쿼리 안나감: getReference()는 프록시 객체를 반환
 //            System.out.println("findRefMember.getClass() = " + findRefMember.getClass()); // 프록시
-//            System.out.println("findRefMember.getUsername() = " + findRefMember.getUsername()); // 쿼리 나감
+//            System.out.println("findRefMember.getUsername() = " + findRefMember.getUsername()); // 쿼리 나감: 프록시 초기화
 
 //            Member findM1 = entityManager.find(Member.class, m1.getId());
 //            Member findM2 = entityManager.find(Member.class, m2.getId());

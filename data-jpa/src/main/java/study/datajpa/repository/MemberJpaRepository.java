@@ -11,8 +11,8 @@ import java.util.Optional;
 @Repository
 public class MemberJpaRepository {
 
-    @PersistenceContext
-    private EntityManager em;
+    @PersistenceContext // SpringContainer가 영속성 컨텍스트(em)을 가져다 준다.
+    private EntityManager em; // jpa를 쓰려면 EntityManager 필요
 
     public Member save(Member member) {
         em.persist(member);

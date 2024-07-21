@@ -152,7 +152,7 @@ class MemberRepositoryTest {
         Page<Member> page = memberRepository.findByAge(age, pageRequest);
 //        Slice<Member> slicePage = memberRepository.findByAge(age, pageRequest);
 
-        // response 반환 시
+        // response 반환 시, Dto로 변환해야 함.
         Page<MemberDto> map = page.map(m -> new MemberDto(m.getId(), m.getUsername(), null));
 
         // then
